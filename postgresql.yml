@@ -1,0 +1,30 @@
+# Use postgres/example user/password credentials
+version: '3.1'
+
+services:
+
+  db:
+    image: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: user
+      POSTGRES_DB: kaggle
+      #POSTGRES_INITDB_ARGS: postgres initdb
+    networks:
+      - kaggle_network
+
+
+  adminer:
+    command: php -S 0.0.0.0:8085 -t /var/www/html
+    image: adminer
+    restart: always
+    ports:
+      - 8085:8085
+    networks:
+      - kaggle_network
+    
+
+# /docker-entrypoint-initdb.d/init-user-db.sh
+networks:
+  kaggle_network:
