@@ -78,5 +78,6 @@ let users only do these things:
 
 <details>
 <summary> Interactive surface </summary>
+- [ ] for the first time, Superset will be downloaded from Github
 </details>
 
