@@ -52,8 +52,8 @@ let users only do these things:
 <details>
 <summary> PostgreSQL </summary>
 
-- [ ] build PostgreSQL
-- [ ] Use interactive interface of PostgreSQL to check data
+- [x] build PostgreSQL
+- [x] Use interactive interface of PostgreSQL to check data
 
 </details>
 
