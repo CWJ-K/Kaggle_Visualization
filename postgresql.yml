@@ -10,6 +10,8 @@ services:
       POSTGRES_USER: user
       POSTGRES_PASSWORD: user
       POSTGRES_DB: kaggle
+    ports:
+      - 5432:5432
     networks:
       - kaggle_network
 
