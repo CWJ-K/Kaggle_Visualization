@@ -11,6 +11,8 @@ services:
       POSTGRES_PASSWORD: user
       POSTGRES_DB: kaggle
       #POSTGRES_INITDB_ARGS: postgres initdb
+    ports:
+      - 5432:5432
     networks:
       - kaggle_network
 

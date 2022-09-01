@@ -63,7 +63,22 @@ let users only do these things:
 <summary> Superset </summary>
 
 - [x] build Superset
-- [ ] Connect PostgreSQL
+  - [ ] load_example: false => failed
+    - [&cross;] SUPERSET_LOAD_EXAMPLES=no or false or comment it
+    - [&cross;]  remove containers
+    - [ ]  reload remote machine
+
+  - [x] user/password created by myself
+
+      ```bash
+        docker exec -it superset_app /bin/bash
+        superset fab reset-password --username admin --password <yourpassword>
+      
+      ```
+- [x] Connect PostgreSQL
+  - can not connect to my own PostgreSQL 
+    - [&check;] try to add network in the docker-compose of superset
+
 - [ ] visualize data
 
 </details>
